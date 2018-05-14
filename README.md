@@ -45,7 +45,7 @@
     # request:
     state = "Minnesota"
 
-    # db.users.aggregate([{ $match : { address : /Minnesota/}},{ $match : { isActive : true}}, {"$sortByCount" : "$favoriteFruit" }]);
+    # db.users.aggregate([{ $match : { $and: [ { address : /Minnesota/}, { isActive : true}] } }, {"$sortByCount" : "$favoriteFruit" }]);
 
     # response:
     
