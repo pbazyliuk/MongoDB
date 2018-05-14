@@ -45,13 +45,12 @@
     # request:
     state = "Minnesota"
 
-    # db.users.aggregate([{ $match : { $and: [ { address : /Minnesota/}, { isActive : true}] } }, {"$sortByCount" : "$favoriteFruit" }]);
+    # db.users.aggregate([{ $match : { $and: [ { address : /Minnesota/}, { isActive : true}] } }, {"$sortByCount" : "$favoriteFruit" }, {$limit: 1}]);
 
     # response:
     
     # { "_id" : "apple", "count" : 4 }
-    # { "_id" : "strawberry", "count" : 1 }
-    # { "_id" : "banana", "count" : 1 }
+    
 
 # 6) Найти саммого раннего зарегистрировавшегося пользователя с таким любимым фруктом (1.5)
 
